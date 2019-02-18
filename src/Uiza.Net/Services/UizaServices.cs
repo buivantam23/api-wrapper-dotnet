@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Uiza.Net.Services.Interface;
+﻿using Uiza.Net.Services.Interface;
 
 namespace Uiza.Net.Services
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public static class UizaServices
     {
         #region PUBLIC PROPERTIES
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IEntityService Entity
         {
@@ -25,11 +22,26 @@ namespace Uiza.Net.Services
             }
         }
 
-        #endregion
+        /// <summary>
+        ///
+        /// </summary>
+        public static IStorageService Storage
+        {
+            get
+            {
+                if (_storage == null)
+                    _storage = new StorageService();
+                return _storage;
+            }
+        }
 
+        #endregion PUBLIC PROPERTIES
 
         #region PRIVATE PROPERTY
+
         private static IEntityService _entity;
-        #endregion
+        private static IStorageService _storage;
+
+        #endregion PRIVATE PROPERTY
     }
 }

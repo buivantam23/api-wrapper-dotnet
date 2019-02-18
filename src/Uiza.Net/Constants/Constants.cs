@@ -11,6 +11,7 @@
         {
             public const string CATEGORY = "media/metadata";
             public const string ENTITY = "media/entity";
+            public const string STORAGE = "media/storage";
             public const string CATEGORY_RELATION = "media/entity/related/metadata";
             public const string AWS_UPLOAD_KEY = "admin/app/config/aws";
             public const string ENTITY_STATUS_PUBLISH = "media/entity/publish/status";
